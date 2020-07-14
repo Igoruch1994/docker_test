@@ -23,21 +23,16 @@ public class HelloController {
 
     @GetMapping("/")
     public List<User> all() {
-
-
         return userRepository.findAll();
     }
-
 
     @GetMapping("/create")
     public List<User> users() {
         User user = new User();
         user.setName("Sam");
-        user.setSalary(3400);
+        user.setSalary(33);
         user.setTeamName("Development");
-
         userRepository.save(user);
-
         return userRepository.findAll();
     }
 
